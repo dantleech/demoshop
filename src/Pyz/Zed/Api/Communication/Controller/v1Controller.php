@@ -5,6 +5,9 @@ namespace Pyz\Zed\Api\Communication\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Spryker\Zed\Application\Communication\Controller\AbstractController;
 
+/**
+ * @method \Pyz\Zed\Api\Business\ApiFacadeInterface getFacade()
+ */
 class v1Controller extends AbstractController
 {
 
@@ -15,7 +18,9 @@ class v1Controller extends AbstractController
      */
     public function docAction(Request $request)
     {
-        return 'docAction';
+        return [
+            'annotations' => $this->getFacade()->getAnnotations($request->get('bundle'))
+        ];
     }
 
     /**

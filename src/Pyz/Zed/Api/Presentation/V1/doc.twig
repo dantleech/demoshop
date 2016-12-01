@@ -1,0 +1,32 @@
+<html>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Method</td>
+                <td>Annotation</td>
+                <td>Parameters</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for method, annotation in annotations %}
+            <tr>
+                <td>{{ method | nl2br}}</td>
+                <td>{{ annotation.docString | nl2br }}</td>
+                <td>
+                    {% for parameter_name, parameter_annotation in annotation.parameters %}
+                        {{ parameter_name }}:
+                        {% if parameter_annotation.isTransfer %}
+                            <a href="docTransfer?transfer={{ parameter_annotation.type | escape}}" target="_blank">
+                        {% endif %}
+                        {{ parameter_annotation.type }}
+                        {% if parameter_annotation.isTransfer %}
+                            </a>
+                        {% endif %}
+                        </br>
+                    {% endfor %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</html>
