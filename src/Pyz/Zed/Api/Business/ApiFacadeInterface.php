@@ -12,4 +12,11 @@ interface ApiFacadeInterface
      */
     public function getAnnotations($bundle);
 
+    /**
+     * @param string $transfer
+     *
+     * @return array
+     */
+    public function getTransferAnnotations($transfer);
+
 }

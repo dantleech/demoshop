@@ -3,6 +3,7 @@
 namespace Pyz\Zed\Api\Business;
 
 use Pyz\Zed\Api\Business\Model\ApiEntry;
+use Pyz\Zed\Api\Business\Model\TransferAnnotator;
 use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
 
 class ApiBusinessFactory extends AbstractBusinessFactory
@@ -29,6 +30,14 @@ class ApiBusinessFactory extends AbstractBusinessFactory
         return new ApiEntry(
             $this->getBundleFacade($bundle)
         );
+    }
+
+    /**
+     * @return \Pyz\Zed\Api\Business\Model\TransferAnnotatorInterface
+     */
+    public function createTransferAnnotator()
+    {
+        return new TransferAnnotator();
     }
 
 }

@@ -4,6 +4,8 @@ namespace Pyz\Zed\Api\Communication\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Spryker\Zed\Application\Communication\Controller\AbstractController;
+use Spryker\Shared\Transfer\AbstractTransfer;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
  * @method \Pyz\Zed\Api\Business\ApiFacadeInterface getFacade()
@@ -30,7 +32,9 @@ class v1Controller extends AbstractController
      */
     public function docTransferAction(Request $request)
     {
-        return 'docTransferAction';
+        return [
+            'transfer_annotation' => $this->getFacade()->getTransferAnnotations($request->get('transfer'))
+        ];
     }
 
 }

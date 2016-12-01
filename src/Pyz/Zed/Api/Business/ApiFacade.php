@@ -20,4 +20,14 @@ class ApiFacade extends AbstractFacade implements ApiFacadeInterface
         return $this->getFactory()->createFacadeProxy($bundle)->getAnnotations();
     }
 
+    /**
+     * @param string $transfer
+     *
+     * @return array
+     */
+    public function getTransferAnnotations($transfer)
+    {
+        return $this->getFactory()->createTransferAnnotator()->annotate($transfer);
+    }
+
 }
