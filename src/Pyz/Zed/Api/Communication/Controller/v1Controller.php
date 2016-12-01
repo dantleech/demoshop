@@ -37,4 +37,51 @@ class v1Controller extends AbstractController
         ];
     }
 
+    /**
+     * @param \Symfony\Component\HttpFoundation\Request $request
+     * @return mixed
+     */
+    public function executeAction(Request $request)
+    {
+        return new JsonResponse($this->resultToArray(
+            $this->getFacade()->callBundleMethod(
+                $request->get('bundle'),
+                $request->get('method'),
+                $request->get('arguments', [])
+            )
+        ));
+    }
+
+    /**
+     * @param mixed $mixed
+     *
+     * @return string
+     */
+    protected function resultToArray($mixed)
+    {
+        if (is_scalar($mixed)) {
+            return $mixed;
+        }
+
+        if ($mixed instanceof AbstractTransfer) {
+            return $mixed->toArray(true);
+        }
+
+        if (is_array($mixed)) {
+            $result = [];
+
+            foreach ($mixed as $key => $value) {
+                $result[$key] = $this->resultToArray($value);
+            }
+
+            return $result;
+        }
+
+        if ($mixed === null) {
+            return null;
+        }
+
+        throw new \InvalidArgumentException();
+    }
+
 }

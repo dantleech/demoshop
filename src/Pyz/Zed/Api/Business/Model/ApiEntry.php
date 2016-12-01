@@ -24,6 +24,47 @@ class ApiEntry implements ApiEntryInterface
     }
 
     /**
+     * @param string $name
+     * @param array  $arguments
+     *
+     * @return mixed
+     */
+    public function forwardCall($name, array $arguments)
+    {
+        if (method_exists($this->wrappedFacade, $name)) {
+            return call_user_func_array([$this->wrappedFacade, $name], $this->castArguments($name, $arguments));
+        }
+        throw new \BadMethodCallException('Non-existing method ' . get_class($this->wrappedFacade) . '::' . $name);
+    }
+
+    /**
+     * @param array $arguments
+     *
+     * @return array
+     */
+    protected function castArguments($methodName, array $arguments = [])
+    {
+        $className = get_class($this->wrappedFacade);
+        $reflection = new ReflectionClass($className);
+        $parameters = $this->annotateIncomingParameters($reflection->getMethod($methodName));
+
+        $result = [];
+        foreach ($parameters as $name => $annotation) {
+            if ($annotation['isTransfer']) {
+                $class = $annotation['type'];
+                /** @var \Spryker\Shared\Transfer\AbstractTransfer $transfer */
+                $transfer = new $class();
+                $transfer->unserialize($arguments[$name]);
+                $result[$name] = $transfer;
+            } else {
+                $result[$name] = $arguments[$name];
+            }
+        }
+
+        return $result;
+    }
+
+    /**
      * @return array
      */
     public function getAnnotations()

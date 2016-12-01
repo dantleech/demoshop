@@ -12,6 +12,18 @@ class ApiFacade extends AbstractFacade implements ApiFacadeInterface
 
     /**
      * @param string $bundle
+     * @param string $method
+     * @param array  $arguments
+     *
+     * @return mixed
+     */
+    public function callBundleMethod($bundle, $method, array $arguments)
+    {
+        return $this->getFactory()->createFacadeProxy($bundle)->forwardCall($method, $arguments);
+    }
+
+    /**
+     * @param string $bundle
      *
      * @return array
      */
