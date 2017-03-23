@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "73c176a376a77aacd4af86322c1d22d0",
+    "content-hash": "acd49f240e69f02a5491a2a895a7b8a5",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -917,16 +917,16 @@
         },
         {
             "name": "moneyphp/money",
-            "version": "v3.0.2",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moneyphp/money.git",
-                "reference": "fd1c642915a9c3613b8a64ede49dd37d84da82cc"
+                "reference": "295c5135af2aedba535587e3d9daa30c176964b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moneyphp/money/zipball/fd1c642915a9c3613b8a64ede49dd37d84da82cc",
-                "reference": "fd1c642915a9c3613b8a64ede49dd37d84da82cc",
+                "url": "https://api.github.com/repos/moneyphp/money/zipball/295c5135af2aedba535587e3d9daa30c176964b6",
+                "reference": "295c5135af2aedba535587e3d9daa30c176964b6",
                 "shasum": ""
             },
             "require": {
@@ -991,7 +991,7 @@
                 "money",
                 "vo"
             ],
-            "time": "2017-03-11T11:18:38+00:00"
+            "time": "2017-03-22T22:24:40+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3009,11 +3009,11 @@
         },
         {
             "name": "spryker/application",
-            "version": "3.0.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/Application.git",
-                "reference": "5cc8142e8505bc962ee6b647f15f7ce5d8f4f6ca",
+                "reference": "4bc5337388a953b3ce8dedd011e323ed49e1f098",
                 "mirrors": [
                     {
                         "url": "https://code.spryker.com:/repo/private/mirrors/%package%/%normalizedUrl%.%type%",
@@ -3023,8 +3023,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/Application/zipball/5cc8142e8505bc962ee6b647f15f7ce5d8f4f6ca",
-                "reference": "5cc8142e8505bc962ee6b647f15f7ce5d8f4f6ca",
+                "url": "https://api.github.com/repos/spryker/Application/zipball/4bc5337388a953b3ce8dedd011e323ed49e1f098",
+                "reference": "4bc5337388a953b3ce8dedd011e323ed49e1f098",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3078,9 +3078,9 @@
             ],
             "description": "Application bundle",
             "support": {
-                "source": "https://github.com/spryker/Application/tree/beta/core-714-big-core-cleanup"
+                "source": "https://github.com/spryker/Application/tree/beta/core-1012-enable-3rd-party-bundles"
             },
-            "time": "2017-02-22T12:08:46+00:00"
+            "time": "2017-03-23T08:07:07+00:00"
         },
         {
             "name": "spryker/assertion",
@@ -4921,11 +4921,11 @@
         },
         {
             "name": "spryker/development",
-            "version": "3.1.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/Development.git",
-                "reference": "865b57d958bac2619c0e781acf2d008751c0230d",
+                "reference": "8521ca178ea50486e422771938901781559d9bcd",
                 "mirrors": [
                     {
                         "url": "https://code.spryker.com:/repo/private/mirrors/%package%/%normalizedUrl%.%type%",
@@ -4935,8 +4935,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/Development/zipball/865b57d958bac2619c0e781acf2d008751c0230d",
-                "reference": "865b57d958bac2619c0e781acf2d008751c0230d",
+                "url": "https://api.github.com/repos/spryker/Development/zipball/8521ca178ea50486e422771938901781559d9bcd",
+                "reference": "8521ca178ea50486e422771938901781559d9bcd",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -4981,9 +4981,9 @@
             ],
             "description": "Development bundle",
             "support": {
-                "source": "https://github.com/spryker/Development/tree/master"
+                "source": "https://github.com/spryker/Development/tree/beta/core-1012-enable-3rd-party-bundles"
             },
-            "time": "2017-03-09T14:48:41+00:00"
+            "time": "2017-03-23T08:07:06+00:00"
         },
         {
             "name": "spryker/discount",
@@ -5451,11 +5451,11 @@
         },
         {
             "name": "spryker/glossary",
-            "version": "3.0.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/Glossary.git",
-                "reference": "1f5d7b6be1f5daff2aaec8a79ea8dc6cdd310a18",
+                "reference": "58116775134d2ba2e97fce64808fd6159f095781",
                 "mirrors": [
                     {
                         "url": "https://code.spryker.com:/repo/private/mirrors/%package%/%normalizedUrl%.%type%",
@@ -5465,8 +5465,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/Glossary/zipball/1f5d7b6be1f5daff2aaec8a79ea8dc6cdd310a18",
-                "reference": "1f5d7b6be1f5daff2aaec8a79ea8dc6cdd310a18",
+                "url": "https://api.github.com/repos/spryker/Glossary/zipball/58116775134d2ba2e97fce64808fd6159f095781",
+                "reference": "58116775134d2ba2e97fce64808fd6159f095781",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -5520,9 +5520,9 @@
             ],
             "description": "Glossary bundle",
             "support": {
-                "source": "https://github.com/spryker/Glossary/tree/beta/core-714-big-core-cleanup"
+                "source": "https://github.com/spryker/Glossary/tree/beta/core-1012-enable-3rd-party-bundles"
             },
-            "time": "2017-02-22T12:08:46+00:00"
+            "time": "2017-03-23T08:07:09+00:00"
         },
         {
             "name": "spryker/graph",
@@ -5633,11 +5633,11 @@
         },
         {
             "name": "spryker/gui",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/Gui.git",
-                "reference": "85a6ef1520a7be659c06d9b4c5cccd151417b90b",
+                "reference": "a19b3bdbc6d3521313daeca7715e139dfa7e0ab3",
                 "mirrors": [
                     {
                         "url": "https://code.spryker.com:/repo/private/mirrors/%package%/%normalizedUrl%.%type%",
@@ -5647,8 +5647,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/Gui/zipball/85a6ef1520a7be659c06d9b4c5cccd151417b90b",
-                "reference": "85a6ef1520a7be659c06d9b4c5cccd151417b90b",
+                "url": "https://api.github.com/repos/spryker/Gui/zipball/a19b3bdbc6d3521313daeca7715e139dfa7e0ab3",
+                "reference": "a19b3bdbc6d3521313daeca7715e139dfa7e0ab3",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -5694,9 +5694,9 @@
             ],
             "description": "Gui bundle",
             "support": {
-                "source": "https://github.com/spryker/Gui/tree/beta/core-714-big-core-cleanup"
+                "source": "https://github.com/spryker/Gui/tree/master"
             },
-            "time": "2017-02-22T12:08:46+00:00"
+            "time": "2017-03-23T09:43:00+00:00"
         },
         {
             "name": "spryker/guzzle",
@@ -5920,11 +5920,11 @@
         },
         {
             "name": "spryker/kernel",
-            "version": "3.1.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/Kernel.git",
-                "reference": "a0d7f04cd3dbd10f357a794e4ddb0aba0b0e6f78",
+                "reference": "c75e53b7ac2c429348a3cfa023f1c2eb449e39b3",
                 "mirrors": [
                     {
                         "url": "https://code.spryker.com:/repo/private/mirrors/%package%/%normalizedUrl%.%type%",
@@ -5934,8 +5934,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/Kernel/zipball/a0d7f04cd3dbd10f357a794e4ddb0aba0b0e6f78",
-                "reference": "a0d7f04cd3dbd10f357a794e4ddb0aba0b0e6f78",
+                "url": "https://api.github.com/repos/spryker/Kernel/zipball/c75e53b7ac2c429348a3cfa023f1c2eb449e39b3",
+                "reference": "c75e53b7ac2c429348a3cfa023f1c2eb449e39b3",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -5983,9 +5983,9 @@
             ],
             "description": "Kernel bundle",
             "support": {
-                "source": "https://github.com/spryker/Kernel/tree/master"
+                "source": "https://github.com/spryker/Kernel/tree/beta/core-1012-enable-3rd-party-bundles"
             },
-            "time": "2017-03-09T12:38:03+00:00"
+            "time": "2017-03-23T08:07:08+00:00"
         },
         {
             "name": "spryker/key-builder",
@@ -8132,11 +8132,11 @@
         },
         {
             "name": "spryker/propel",
-            "version": "3.0.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/Propel.git",
-                "reference": "7e8ecc94eb12d746f57926d5852ce1b5ceb16ffc",
+                "reference": "c798146723a6d240ebb975f33aa897f4d91e25fa",
                 "mirrors": [
                     {
                         "url": "https://code.spryker.com:/repo/private/mirrors/%package%/%normalizedUrl%.%type%",
@@ -8146,8 +8146,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/Propel/zipball/7e8ecc94eb12d746f57926d5852ce1b5ceb16ffc",
-                "reference": "7e8ecc94eb12d746f57926d5852ce1b5ceb16ffc",
+                "url": "https://api.github.com/repos/spryker/Propel/zipball/c798146723a6d240ebb975f33aa897f4d91e25fa",
+                "reference": "c798146723a6d240ebb975f33aa897f4d91e25fa",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -8199,9 +8199,9 @@
             ],
             "description": "Propel bundle",
             "support": {
-                "source": "https://github.com/spryker/Propel/tree/beta/core-714-big-core-cleanup"
+                "source": "https://github.com/spryker/Propel/tree/beta/core-1012-enable-3rd-party-bundles"
             },
-            "time": "2017-02-22T12:08:46+00:00"
+            "time": "2017-03-23T08:07:10+00:00"
         },
         {
             "name": "spryker/propel-orm",
@@ -9342,11 +9342,11 @@
         },
         {
             "name": "spryker/step-engine",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/StepEngine.git",
-                "reference": "9f1df73d874fad338710921b44989f472c8a25c4",
+                "reference": "08f1f82bff3ad135d821d2cb3315f65195c6fb84",
                 "mirrors": [
                     {
                         "url": "https://code.spryker.com:/repo/private/mirrors/%package%/%normalizedUrl%.%type%",
@@ -9356,8 +9356,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/StepEngine/zipball/9f1df73d874fad338710921b44989f472c8a25c4",
-                "reference": "9f1df73d874fad338710921b44989f472c8a25c4",
+                "url": "https://api.github.com/repos/spryker/StepEngine/zipball/08f1f82bff3ad135d821d2cb3315f65195c6fb84",
+                "reference": "08f1f82bff3ad135d821d2cb3315f65195c6fb84",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -9402,9 +9402,9 @@
             ],
             "description": "StepEngine bundle",
             "support": {
-                "source": "https://github.com/spryker/StepEngine/tree/beta/core-714-big-core-cleanup"
+                "source": "https://github.com/spryker/StepEngine/tree/master"
             },
-            "time": "2017-02-22T12:08:46+00:00"
+            "time": "2017-03-23T09:33:48+00:00"
         },
         {
             "name": "spryker/stock",
@@ -9823,11 +9823,11 @@
         },
         {
             "name": "spryker/testify",
-            "version": "3.0.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/Testify.git",
-                "reference": "22cb68622eb047ba54c658c1c5cd4ee9d40cdb5b",
+                "reference": "6cdc2e62d87531a054a15bf8524de56b78ab1969",
                 "mirrors": [
                     {
                         "url": "https://code.spryker.com:/repo/private/mirrors/%package%/%normalizedUrl%.%type%",
@@ -9837,8 +9837,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/Testify/zipball/22cb68622eb047ba54c658c1c5cd4ee9d40cdb5b",
-                "reference": "22cb68622eb047ba54c658c1c5cd4ee9d40cdb5b",
+                "url": "https://api.github.com/repos/spryker/Testify/zipball/6cdc2e62d87531a054a15bf8524de56b78ab1969",
+                "reference": "6cdc2e62d87531a054a15bf8524de56b78ab1969",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -9883,9 +9883,9 @@
             ],
             "description": "Testify bundle",
             "support": {
-                "source": "https://github.com/spryker/Testify/tree/beta/core-714-big-core-cleanup"
+                "source": "https://github.com/spryker/Testify/tree/beta/core-1012-enable-3rd-party-bundles"
             },
-            "time": "2017-02-22T12:08:46+00:00"
+            "time": "2017-03-23T08:07:08+00:00"
         },
         {
             "name": "spryker/touch",
@@ -9955,11 +9955,11 @@
         },
         {
             "name": "spryker/transfer",
-            "version": "3.1.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/Transfer.git",
-                "reference": "83ee7ec5aa14d65918f4516c04492ceea8c2d95b",
+                "reference": "b2b981801a9977c858a65ca912eed81dc5ea3744",
                 "mirrors": [
                     {
                         "url": "https://code.spryker.com:/repo/private/mirrors/%package%/%normalizedUrl%.%type%",
@@ -9969,8 +9969,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/Transfer/zipball/83ee7ec5aa14d65918f4516c04492ceea8c2d95b",
-                "reference": "83ee7ec5aa14d65918f4516c04492ceea8c2d95b",
+                "url": "https://api.github.com/repos/spryker/Transfer/zipball/b2b981801a9977c858a65ca912eed81dc5ea3744",
+                "reference": "b2b981801a9977c858a65ca912eed81dc5ea3744",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -9980,7 +9980,6 @@
                 ]
             },
             "require": {
-                "spryker/config": "^3.0.0",
                 "spryker/kernel": "^3.0.0",
                 "spryker/log": "^3.0.0",
                 "spryker/symfony": "^3.0.0",
@@ -10019,17 +10018,17 @@
             ],
             "description": "Transfer bundle",
             "support": {
-                "source": "https://github.com/spryker/Transfer/tree/master"
+                "source": "https://github.com/spryker/Transfer/tree/beta/core-1012-enable-3rd-party-bundles"
             },
-            "time": "2017-03-06T09:12:18+00:00"
+            "time": "2017-03-23T08:07:08+00:00"
         },
         {
             "name": "spryker/twig",
-            "version": "3.0.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/Twig.git",
-                "reference": "60b82751a820fb64adc9ff77ea1157b4e49682cb",
+                "reference": "cf32da80292fe8ca28ddcaa5dfb593e934cf71a9",
                 "mirrors": [
                     {
                         "url": "https://code.spryker.com:/repo/private/mirrors/%package%/%normalizedUrl%.%type%",
@@ -10039,8 +10038,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/Twig/zipball/60b82751a820fb64adc9ff77ea1157b4e49682cb",
-                "reference": "60b82751a820fb64adc9ff77ea1157b4e49682cb",
+                "url": "https://api.github.com/repos/spryker/Twig/zipball/cf32da80292fe8ca28ddcaa5dfb593e934cf71a9",
+                "reference": "cf32da80292fe8ca28ddcaa5dfb593e934cf71a9",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -10051,11 +10050,14 @@
             },
             "require": {
                 "spryker/kernel": "^3.0.0",
+                "spryker/symfony": "^3.0.0",
+                "spryker/util-text": "^1.0.0",
                 "spryker/zend": "^2.0.0",
                 "twig/twig": "^1.20.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
+                "spryker/silex": "*",
                 "spryker/testify": "*"
             },
             "suggest": {
@@ -10086,17 +10088,17 @@
             ],
             "description": "Twig bundle",
             "support": {
-                "source": "https://github.com/spryker/Twig/tree/beta/core-714-big-core-cleanup"
+                "source": "https://github.com/spryker/Twig/tree/beta/core-1012-enable-3rd-party-bundles"
             },
-            "time": "2017-02-22T12:08:46+00:00"
+            "time": "2017-03-23T08:07:13+00:00"
         },
         {
             "name": "spryker/url",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/Url.git",
-                "reference": "2554c7dad6be177590ba384015b5d7cf0db8b5c0",
+                "reference": "107af8441a278340691476e7dfec5ab48bdc454c",
                 "mirrors": [
                     {
                         "url": "https://code.spryker.com:/repo/private/mirrors/%package%/%normalizedUrl%.%type%",
@@ -10106,8 +10108,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/Url/zipball/2554c7dad6be177590ba384015b5d7cf0db8b5c0",
-                "reference": "2554c7dad6be177590ba384015b5d7cf0db8b5c0",
+                "url": "https://api.github.com/repos/spryker/Url/zipball/107af8441a278340691476e7dfec5ab48bdc454c",
+                "reference": "107af8441a278340691476e7dfec5ab48bdc454c",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -10152,9 +10154,9 @@
             ],
             "description": "Url bundle",
             "support": {
-                "source": "https://github.com/spryker/Url/tree/beta/core-714-big-core-cleanup"
+                "source": "https://github.com/spryker/Url/tree/master"
             },
-            "time": "2017-02-22T12:08:46+00:00"
+            "time": "2017-03-23T09:43:35+00:00"
         },
         {
             "name": "spryker/user",
@@ -10615,11 +10617,11 @@
         },
         {
             "name": "spryker/zed-navigation",
-            "version": "1.0.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/ZedNavigation.git",
-                "reference": "0a7f43af931c4bd92e622e4f4e2326ba85be2578",
+                "reference": "365a38fe63c58867d8b0b4b3e3ca2a5c854aceec",
                 "mirrors": [
                     {
                         "url": "https://code.spryker.com:/repo/private/mirrors/%package%/%normalizedUrl%.%type%",
@@ -10629,8 +10631,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/ZedNavigation/zipball/0a7f43af931c4bd92e622e4f4e2326ba85be2578",
-                "reference": "0a7f43af931c4bd92e622e4f4e2326ba85be2578",
+                "url": "https://api.github.com/repos/spryker/ZedNavigation/zipball/365a38fe63c58867d8b0b4b3e3ca2a5c854aceec",
+                "reference": "365a38fe63c58867d8b0b4b3e3ca2a5c854aceec",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -10675,9 +10677,9 @@
             ],
             "description": "ZedNavigation bundle",
             "support": {
-                "source": "https://github.com/spryker/ZedNavigation/tree/beta/core-714-big-core-cleanup"
+                "source": "https://github.com/spryker/ZedNavigation/tree/beta/core-1012-enable-3rd-party-bundles"
             },
-            "time": "2017-02-22T12:08:46+00:00"
+            "time": "2017-03-23T09:40:23+00:00"
         },
         {
             "name": "spryker/zed-request",
@@ -14631,9 +14633,73 @@
             "time": "2015-05-27T22:58:02+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "3.0.0",
+            "alias_normalized": "3.0.0.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
+            "package": "spryker/application"
+        },
+        {
+            "alias": "3.1.0",
+            "alias_normalized": "3.1.0.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
+            "package": "spryker/development"
+        },
+        {
+            "alias": "3.0.0",
+            "alias_normalized": "3.0.0.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
+            "package": "spryker/glossary"
+        },
+        {
+            "alias": "3.1.0",
+            "alias_normalized": "3.1.0.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
+            "package": "spryker/kernel"
+        },
+        {
+            "alias": "3.0.0",
+            "alias_normalized": "3.0.0.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
+            "package": "spryker/propel"
+        },
+        {
+            "alias": "3.0.0",
+            "alias_normalized": "3.0.0.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
+            "package": "spryker/testify"
+        },
+        {
+            "alias": "3.1.0",
+            "alias_normalized": "3.1.0.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
+            "package": "spryker/transfer"
+        },
+        {
+            "alias": "3.0.0",
+            "alias_normalized": "3.0.0.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
+            "package": "spryker/twig"
+        },
+        {
+            "alias": "1.0.0",
+            "alias_normalized": "1.0.0.0",
+            "version": "dev-beta/core-1012-enable-3rd-party-bundles",
+            "package": "spryker/zed-navigation"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
+        "spryker/application": 20,
+        "spryker/development": 20,
+        "spryker/glossary": 20,
+        "spryker/kernel": 20,
+        "spryker/propel": 20,
+        "spryker/testify": 20,
+        "spryker/transfer": 20,
+        "spryker/twig": 20,
+        "spryker/zed-navigation": 20,
         "spryker/rabbit-mq": 20
     },
     "prefer-stable": true,
