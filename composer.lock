@@ -10028,7 +10028,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/Twig.git",
-                "reference": "cf32da80292fe8ca28ddcaa5dfb593e934cf71a9",
+                "reference": "6e88849d9051fb146c3ca455d159e9a8566b0d35",
                 "mirrors": [
                     {
                         "url": "https://code.spryker.com:/repo/private/mirrors/%package%/%normalizedUrl%.%type%",
@@ -10038,8 +10038,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/Twig/zipball/cf32da80292fe8ca28ddcaa5dfb593e934cf71a9",
-                "reference": "cf32da80292fe8ca28ddcaa5dfb593e934cf71a9",
+                "url": "https://api.github.com/repos/spryker/Twig/zipball/6e88849d9051fb146c3ca455d159e9a8566b0d35",
+                "reference": "6e88849d9051fb146c3ca455d159e9a8566b0d35",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -10090,7 +10090,7 @@
             "support": {
                 "source": "https://github.com/spryker/Twig/tree/beta/core-1012-enable-3rd-party-bundles"
             },
-            "time": "2017-03-23T08:07:13+00:00"
+            "time": "2017-03-23T15:57:10+00:00"
         },
         {
             "name": "spryker/url",
