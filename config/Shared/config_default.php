@@ -38,6 +38,7 @@ use Spryker\Shared\ZedRequest\ZedRequestConstants;
 use Spryker\Zed\DummyPayment\DummyPaymentConfig;
 use Spryker\Zed\Oms\OmsConfig;
 use Spryker\Zed\Propel\PropelConfig;
+use SprykerEco\Shared\Amazonpay\AmazonpayConstants;
 
 $config[KernelConstants::PROJECT_NAMESPACES] = [
     'Pyz',
@@ -272,6 +273,12 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
         'action' => 'index',
         'type' => 'allow',
     ],
+    [
+        'bundle' => 'amazonpay',
+        'controller' => 'ipn',
+        'action' => 'endpoint',
+        'type' => 'allow',
+    ],
 ];
 
 /*
@@ -294,6 +301,12 @@ $config[AclConstants::ACL_USER_RULE_WHITELIST] = [
         'bundle' => 'heartbeat',
         'controller' => 'heartbeat',
         'action' => 'index',
+        'type' => 'allow',
+    ],
+    [
+        'bundle' => 'amazonpay',
+        'controller' => 'ipn',
+        'action' => 'endpoint',
         'type' => 'allow',
     ],
 ];
@@ -399,25 +412,31 @@ $config[PropelConstants::USE_SUDO_TO_MANAGE_DATABASE] = true;
 $config[KernelConstants::DEPENDENCY_INJECTOR_YVES] = [
     'Checkout' => [
         'DummyPayment',
+        'Amazonpay',
     ],
 ];
 
 $config[KernelConstants::DEPENDENCY_INJECTOR_ZED] = [
     'Payment' => [
         'DummyPayment',
+        'Amazonpay',
     ],
     'Oms' => [
         'DummyPayment',
+        'Amazonpay',
     ],
 ];
 
 $config[OmsConstants::PROCESS_LOCATION] = [
     OmsConfig::DEFAULT_PROCESS_LOCATION,
     $config[KernelConstants::SPRYKER_ROOT] . '/dummy-payment/config/Zed/Oms',
+    APPLICATION_ROOT_DIR . '/vendor/spryker-eco' . '/amazonpay/config/Zed/Oms',
 ];
 
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     'DummyPayment01',
+    'AmazonpayPaymentAsync01',
+    'AmazonpayPaymentSync01',
 ];
 
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
@@ -449,4 +468,25 @@ $config[QueueConstants::QUEUE_ADAPTER_CONFIGURATION] = [
         QueueConfig::CONFIG_QUEUE_ADAPTER => \Spryker\Client\RabbitMq\Model\RabbitMqAdapter::class,
         QueueConfig::CONFIG_MAX_WORKER_NUMBER => 1,
     ],
+];
+
+$config[AmazonpayConstants::CLIENT_ID] = 'amzn1.application-oa2-client.cf89686fc80743ee9478aec9489fcbdc';
+$config[AmazonpayConstants::CLIENT_SECRET] = '87b7f1770e29ef1339352eb39a7a01f8043c164134f79cc974c1c22edc39dc8a';
+$config[AmazonpayConstants::SELLER_ID] = 'A36VZZYZOVN3S6';
+$config[AmazonpayConstants::ACCESS_KEY_ID] = 'AKIAJZDV43K7WO2EFFHA';
+$config[AmazonpayConstants::SECRET_ACCESS_KEY] = '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';
+$config[AmazonpayConstants::REGION] = 'DE';
+$config[AmazonpayConstants::SANDBOX] = true;
+$config[AmazonpayConstants::AUTH_TRANSACTION_TIMEOUT] = 1000;
+$config[AmazonpayConstants::CAPTURE_NOW] = false;
+$config[AmazonpayConstants::ERROR_REPORT_LEVEL] = 'ERRORS_ONLY';
+
+$config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING][AmazonpayConstants::PAYMENT_METHOD] =
+    $config[AmazonpayConstants::CAPTURE_NOW] ? 'AmazonpayPaymentSync01' : 'AmazonpayPaymentAsync01';
+
+$config[AclConstants::ACL_DEFAULT_RULES][] = [
+    'bundle' => 'amazonpay',
+    'controller' => 'ipn',
+    'action' => 'endpoint',
+    'type' => 'allow',
 ];

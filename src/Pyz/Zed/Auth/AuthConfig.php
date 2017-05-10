@@ -19,6 +19,7 @@ class AuthConfig extends SprykerAuthConfig
     {
         $this->addIgnorable('heartbeat', 'index', 'index');
         $this->addIgnorable('_profiler', 'wdt', '*');
+        $this->addIgnorable('amazonpay', 'ipn', 'endpoint');
 
         return parent::getIgnorable();
     }

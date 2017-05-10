@@ -15,4 +15,16 @@ use Spryker\Zed\Sales\Persistence\Propel\AbstractSpySalesOrder as BaseSpySalesOr
  */
 class SpySalesOrder extends BaseSpySalesOrder
 {
+    /**
+     * Get the [order_reference] column value.
+     *
+     * @return string
+     */
+    public function getOrderReference()
+    {
+        $amazonpayReference = $this->getSpyPaymentAmazonpays()->getFirst();
+        return $amazonpayReference
+            ? $amazonpayReference->getSellerOrderId()
+            : $this->order_reference;
+    }
 }

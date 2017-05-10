@@ -27,7 +27,7 @@ $config[PropelConstants::ZED_DB_ENGINE]
     = $config[PropelQueryBuilderConstants::ZED_DB_ENGINE]
     = $config[PropelConstants::ZED_DB_ENGINE_PGSQL];
 
-$yvesHost = 'www.de.demoshop.local';
+$yvesHost = 'www.de.amazonpayeco.local';
 $config[ApplicationConstants::HOST_YVES]
     = $config[ProductManagementConstants::HOST_YVES]
     = $config[PayoneConstants::HOST_YVES]
@@ -40,7 +40,7 @@ $config[SessionConstants::YVES_SESSION_COOKIE_DOMAIN] = $yvesHost;
 $config[ApplicationConstants::HOST_SSL_YVES] = 'https://' . $yvesHost;
 $config[ApplicationConstants::HOST_SSL_STATIC_ASSETS] = $config[ApplicationConstants::HOST_SSL_STATIC_MEDIA] = $yvesHost;
 
-$zedHost = 'zed.de.demoshop.local';
+$zedHost = 'zed.de.amazonpayeco.local';
 $config[ApplicationConstants::HOST_ZED_GUI]
     = 'http://' . $zedHost;
 $config[ApplicationConstants::HOST_ZED_API]

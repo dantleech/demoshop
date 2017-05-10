@@ -22,6 +22,7 @@ use Spryker\Zed\ProductBundle\Communication\Plugin\Sales\ProductBundleOrderSaver
 use Spryker\Zed\ProductOption\Communication\Plugin\ProductOptionOrderSaverPlugin;
 use Spryker\Zed\Sales\Communication\Plugin\SalesOrderSaverPlugin;
 use Spryker\Zed\Shipment\Communication\Plugin\OrderShipmentSavePlugin;
+use SprykerEco\Zed\Amazonpay\Communication\Plugin\Checkout\AmazonpaySaveOrderPlugin;
 
 class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {
@@ -56,6 +57,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
             new DiscountOrderSavePlugin(),
             new ProductBundleOrderSaverPlugin(),
             new PaymentSaverPlugin(),
+            new AmazonpaySaveOrderPlugin(),
         ];
     }
 

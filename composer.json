@@ -15,6 +15,7 @@
     "ext-pgsql": "*",
     "ext-readline": "*",
     "ext-redis": "*",
+    "spryker-eco/amazonpay": "^4.0@dev",
     "spryker/acl": "^3.0.0",
     "spryker/api": "dev-master as 0.1",
     "spryker/application": "^3.0.0",
@@ -205,6 +206,10 @@
     {
       "type": "git",
       "url": "https://github.com/spryker/rabbit-mq.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/spryker-eco/AmazonPay.git"
     }
   ],
   "scripts": {

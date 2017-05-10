@@ -54,6 +54,7 @@ use Spryker\Yves\ProductGroup\Plugin\Provider\ProductGroupTwigServiceProvider;
 use Spryker\Yves\ProductRelation\Plugin\ProductRelationTwigServiceProvider;
 use Spryker\Yves\Storage\Plugin\Provider\StorageRequestCacheServiceProvider;
 use Spryker\Yves\Twig\Plugin\ServiceProvider\TwigServiceProvider as SprykerTwigServiceProvider;
+use SprykerEco\Yves\Amazonpay\Plugin\Provider\AmazonpayControllerProvider;
 
 class YvesBootstrap
 {
@@ -155,6 +156,7 @@ class YvesBootstrap
     protected function getControllerProviderStack($isSsl)
     {
         return [
+            new AmazonpayControllerProvider($isSsl),
             new ApplicationControllerProvider($isSsl),
             new CheckoutControllerProvider($isSsl),
             new CustomerControllerProvider($isSsl),
