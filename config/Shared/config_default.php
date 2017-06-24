@@ -266,7 +266,7 @@ $config[ZedRequestConstants::ZED_API_SSL_ENABLED] = false;
 $config[ApplicationConstants::ZED_SSL_EXCLUDED] = ['heartbeat/index'];
 
 // ---------- Theme
-$YVES_THEME = 'default';
+$YVES_THEME = 'react';
 $config[TwigConstants::YVES_THEME] = $YVES_THEME;
 $config[CmsConstants::YVES_THEME] = $YVES_THEME;
 

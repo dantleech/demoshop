@@ -1,37 +1,35 @@
 {
   "private": true,
-  "name": "spryker-demoshop",
+  "name": "spryker-demoshop-react",
   "version": "1.0.0",
-  "description": "Spryker Demoshop project",
+  "description": "Spryker Demoshop project (react)",
   "author": {
     "name": "Spryker",
     "email": "info@spryker.com",
     "url": "http://spryker.com/"
   },
   "scripts": {
-    "yves": "node ./assets/Yves/default/build",
-    "yves:dev": "node ./assets/Yves/default/build --dev",
-    "yves:prod": "node ./assets/Yves/default/build --prod",
+    "yves": "node ./frontend/Yves/react/build",
+    "yves:dev": "node ./frontend/Yves/react/build --dev",
+    "yves:prod": "node ./frontend/Yves/react/build --prod",
     "zed": "node ./node_modules/@spryker/oryx-for-zed/build",
     "zed:dev": "node ./node_modules/@spryker/oryx-for-zed/build --dev",
     "zed:prod": "node ./node_modules/@spryker/oryx-for-zed/build --prod"
   },
   "engines": {
-    "node": "^6.0.0"
+    "node": "^7.0.0"
   },
   "dependencies": {
-    "es6-promise": "~4.1.0",
-    "font-awesome": "~4.7.0",
-    "foundation-sites": "~6.3.1",
-    "jquery": "~3.2.0",
-    "slick-carousel": "~1.6.0",
-    "lodash": "~4.17.2",
-    "motion-ui": "~1.2.2"
+    "es6-promise": "~4.1.0"
   },
   "devDependencies": {
     "@spryker/oryx": "^1.0.0",
     "@spryker/oryx-for-zed": "^1.0.0",
     "autoprefixer": "~6.7.6",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "copy-webpack-plugin": "~4.0.1",
     "css-loader": "~0.27.1",
     "extract-text-webpack-plugin": "~2.1.0",
@@ -40,7 +38,7 @@
     "postcss-loader": "~1.3.3",
     "sass-loader": "~6.0.3",
     "style-loader": "~0.13.1",
-    "webpack": "~2.3.0",
+    "webpack": "~2.6.1",
     "yargs": "~7.0.2"
   }
 }
