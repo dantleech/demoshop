@@ -1,0 +1,9 @@
+{% extends 'base' | C %}
+
+{% set root = 'o-content' %}
+
+{% block body %}
+    <main class="{{ block('class') }} g-grid g-grid--container" {{ block('attr') }}>
+        <div id="content"></div>
+    </main>
+{% endblock %}

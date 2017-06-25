@@ -1,0 +1,12 @@
+
+@mixin font-size($type) {
+    font-size: map-get($font-size, $type);
+}
+
+@mixin font-weight($weight) {
+    font-weight: map-get($font-weight, $weight);
+}
+
+@mixin line-height($type) {
+    line-height: map-get($font-line-height, $type);
+}

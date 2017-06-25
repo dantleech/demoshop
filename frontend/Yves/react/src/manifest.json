@@ -1,0 +1,25 @@
+{
+    "short_name": "Spaceship",
+    "name": "Spryker React Progressive Web App shop",
+    "start_url": "/",
+    "background_color": "#2196F3",
+    "theme_color": "#2196F3",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "images/rocket-1x.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "images/rocket-2x.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "images/rocket-4x.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ]
+}

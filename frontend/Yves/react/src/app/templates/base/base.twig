@@ -1,0 +1,46 @@
+{%- set lang = lang | default('en-US') -%}
+{%- set title = title | default('Kudu') -%}
+
+<!DOCTYPE html>
+<html class="no-js" lang="{{ lang }}">
+    <head>
+        {% block meta %}
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+            <meta name="author" content="Spryker Systems GmbH" />
+            <meta name="title" content="{{ title }}" />
+        {% endblock %}
+
+        {% block styles %}
+            <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700,700i">
+            <link rel="stylesheet" href="{{ media('css/app.css') }}" />
+        {% endblock %}
+
+        <link rel="manifest" href="{{ media('manifest.json') }}">
+
+        <title>{{ title }}</title>
+    </head>
+
+    <body>
+        {% include 'header' | O with {
+            'data': {
+                'title': title,
+                'description': 'A Spryker-PWA-React shop example'
+            }
+        } only %}
+
+        {% include 'content' | O only %}
+
+        {% include 'footer' | O with {
+            'data': {
+                'copyright': '(c) Spryker Frontend Team ;)'
+            }
+        } only %}
+
+        {% block javascript %}
+            <script src="{{ media('js/manifest.js') }}"></script>
+            <script src="{{ media('js/vendor.js') }}"></script>
+            <script src="{{ media('js/app.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>

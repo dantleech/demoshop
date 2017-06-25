@@ -25,11 +25,11 @@ class ApplicationControllerProvider extends AbstractYvesControllerProvider
     {
         $allowedLocalesPattern = $this->getAllowedLocalesPattern();
 
-        $this->createController('/{root}', self::ROUTE_HOME, 'Application', 'Index')
+        $this->createController('/{root}', self::ROUTE_HOME, 'Application', 'home')
             ->assert('root', $allowedLocalesPattern)
             ->value('root', '');
 
-        $this->createController(self::ROUTE_ERROR_404_PATH, self::ROUTE_ERROR_404, 'Application', 'Error404');
+        $this->createController(self::ROUTE_ERROR_404_PATH, self::ROUTE_ERROR_404, 'Application', 'e404');
     }
 
 }

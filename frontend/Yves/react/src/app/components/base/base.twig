@@ -1,0 +1,30 @@
+
+{% set root = root | default(null) %}
+{% set modifiers = modifiers | default([]) %}
+{% set class = class | default('') %}
+{% set attributes = attributes | default({}) %}
+{% set data = data | default({}) %}
+
+{% set debug = false %}
+
+{%- if debug -%}
+    {%- block helpers -%}
+        {%- block class -%}
+            {{- root -}} 
+            {% for modifier in modifiers %} {{ root }}--{{ modifier }}{% endfor -%}
+            {% if class %} {{ class -}}{% endif -%}
+        {%- endblock -%}
+
+        {%- block attr -%}
+            {%- for attrname, attrvalue in attributes -%}
+                {%- if attrvalue is sameas(true) -%}
+                    {{- attrname }}
+                {%- elseif attrvalue is not sameas(false) -%}
+                    {{- attrname }}='{{ attrvalue }}'
+                {%- endif -%}
+            {%- endfor -%}
+        {%- endblock -%}
+    {%- endblock -%}
+{%- endif -%}
+
+{% block body %}{% endblock %}

@@ -9,4 +9,12 @@ namespace Pyz\Yves\Twig\Model;
 
 class MediaUrlBuilder extends AbstractUrlBuilder implements MediaUrlBuilderInterface
 {
+    /**
+     * @param string $mediaPath
+     *
+     * @return string
+     */
+    public function buildUrl($mediaPath) {
+        return '/assets/react/' . $mediaPath;
+    }
 }

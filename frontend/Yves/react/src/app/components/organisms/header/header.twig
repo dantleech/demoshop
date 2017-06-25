@@ -1,0 +1,14 @@
+{% extends 'base' | C %}
+
+{% set root = 'o-header' %}
+{% set title = data.title | default('') %}
+{% set description = data.description | default('') %}
+
+{% block body %}
+    <header class="{{ block('class') }}" {{ block('attr') }}>
+        <div class="g-grid g-grid--container g-grid--justify">
+            <strong class="g-col">{{ title }}</strong>
+            <small class="g-col">{{ description }}</small>
+        </div>
+    </header>
+{% endblock %}

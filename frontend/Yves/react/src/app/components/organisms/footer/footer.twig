@@ -1,0 +1,12 @@
+{% extends 'base' | C %}
+
+{% set root = 'o-footer' %}
+{% set copyright = data.copyright | default('') %}
+
+{% block body %}
+    <footer class="{{ block('class') }}" {{ block('attr') }}>
+        <div class="g-grid g-grid--container g-grid--right">
+            <small class="g-col">{{ copyright | raw }}</small>
+        </div>
+    </footer>
+{% endblock %}

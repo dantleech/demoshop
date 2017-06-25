@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "outDir": "./public/Yves/react",
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "module": "commonjs",
+        "target": "es5",
+        "jsx": "react"
+    },
+    "include": [
+        "./frontend/Yves/react/src/**/*"
+    ]
+}

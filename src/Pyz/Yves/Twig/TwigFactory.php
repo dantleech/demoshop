@@ -78,5 +78,4 @@ class TwigFactory extends SprykerTwigFactory
 
         return new UrlParameterCacheBuster($cacheBust);
     }
-
 }

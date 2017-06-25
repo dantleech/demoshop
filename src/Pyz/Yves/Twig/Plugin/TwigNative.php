@@ -13,12 +13,14 @@ use Twig_SimpleFilter;
 
 class TwigNative extends AbstractPlugin implements TwigFilterPluginInterface
 {
-
     /**
      * @return \Twig_SimpleFilter[]
      */
     public function getFilters()
     {
+        $appPath = 'src/app';
+        $componentsPath = $appPath . '/components';
+
         return [
             new Twig_SimpleFilter('floor', function ($value) {
                 return floor($value);
@@ -29,7 +31,34 @@ class TwigNative extends AbstractPlugin implements TwigFilterPluginInterface
             new Twig_SimpleFilter('int', function ($value) {
                 return (int)$value;
             }),
+
+            // components (atomic design) filters
+            new Twig_SimpleFilter('C', function ($value) use ($componentsPath) {
+                return $componentsPath . '/base/' . $value . '.twig';
+            }),
+            new Twig_SimpleFilter('A', function ($value) use ($componentsPath) {
+                return $componentsPath . '/atoms/' . $this->getTemplateFilename($value);
+            }),
+            new Twig_SimpleFilter('M', function ($value) use ($componentsPath) {
+                return $componentsPath . '/molecules/' . $this->getTemplateFilename($value);
+            }),
+            new Twig_SimpleFilter('O', function ($value) use ($componentsPath) {
+                return $componentsPath . '/organisms/' . $this->getTemplateFilename($value);
+            }),
+            new Twig_SimpleFilter('T', function ($value) use ($appPath) {
+                return $appPath .'/templates/' . $this->getTemplateFilename($value);
+            }),
         ];
+    }
+
+    /**
+     * @param string $name
+     *
+     * @return string
+     */
+    protected function getTemplateFilename($name)
+    {
+        return $name . '/' . $name . '.twig';
     }
 
 }

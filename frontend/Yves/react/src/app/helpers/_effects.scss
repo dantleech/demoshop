@@ -1,0 +1,23 @@
+
+@mixin transition(
+    $props: all,
+    $duration: $effects-default-duration,
+    $ease: $effects-default-ease
+) {
+    $transition: null;
+
+    @each $prop in $props {
+        $transition: $prop $duration $ease, $transition;
+    }
+
+    transition: $transition;
+}
+
+@mixin transition-visibility(
+    $props: opacity visibility,
+    $duration: $effects-default-duration,
+    $ease: $effects-default-ease
+) {
+    @include transition($props, $duration, $ease);
+}
+

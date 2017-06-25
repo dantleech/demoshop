@@ -50,6 +50,7 @@ public/Zed/assets/
 # vagrant stuff
 .vagrant
 Vagrantfile
+certs
 
 # profiling
 /profiler

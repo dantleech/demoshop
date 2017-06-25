@@ -1,0 +1,34 @@
+
+.u-is-hidden {
+    display: none;
+
+    @each $edgeA, $widthA in $grid-breakpoints {
+        @each $edgeB, $widthB in $grid-breakpoints {
+            @if $edgeA == $edgeB {
+                &--#{$edgeA} {
+                    @include breakpoint($widthA) {
+                        display: none;
+                    }
+                }
+            } @elseif $widthB > $widthA {
+                &--#{$edgeA}-#{$edgeB} {
+                    @include breakpoint($widthA $widthB) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.u-is-visible {
+    @include is-visible;
+}
+
+.u-is-invisible {
+    @include is-invisible;
+}
+
+.u-is-scrollable {
+    overflow-x: auto;
+}
