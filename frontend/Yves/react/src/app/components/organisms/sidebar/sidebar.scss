@@ -1,0 +1,21 @@
+
+@import '~shared';
+
+$o-sidebar-width: 250px;
+
+.o-sidebar {
+    @include shadow;
+    @include transition(transform);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: - $o-sidebar-width;
+    width: $o-sidebar-width;
+    margin: auto;
+    background-color: $color-white;
+    z-index: $zi-sidebar;
+
+    &.u-is-shown {
+        transform: translateX(- $o-sidebar-width);
+    }
+}

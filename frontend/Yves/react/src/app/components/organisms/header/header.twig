@@ -3,12 +3,19 @@
 {% set root = 'o-header' %}
 {% set title = data.title | default('') %}
 {% set description = data.description | default('') %}
+{% set togglerClass = data.togglerClass | default('') %}
 
 {% block body %}
     <header class="{{ block('class') }}" {{ block('attr') }}>
-        <div class="g-grid g-grid--container g-grid--justify">
-            <strong class="g-col">{{ title }}</strong>
-            <small class="g-col">{{ description }}</small>
+        <div class="g-grid g-grid--container g-grid--middle g-grid--justify">
+            <div class="g-col">
+                <strong>{{ title }}</strong>
+                <small>{{ description }}</small>
+            </div>
+            
+            <a class="o-header__hamburger g-col {{ togglerClass }}" href="#">
+                <span class="fa fa-bars"></span>
+            </a>
         </div>
     </header>
 {% endblock %}

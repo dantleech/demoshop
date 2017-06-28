@@ -21,20 +21,33 @@
         <title>{{ title }}</title>
     </head>
 
-    <body>
+    <body class="js-base-template">
         {% include 'header' | O with {
             'data': {
                 'title': title,
-                'description': 'A Spryker-PWA-React shop example'
+                'description': 'A Spryker-PWA-React shop example',
+                'togglerClass': 'js-base-template__toggler'
             }
         } only %}
 
-        {% include 'content' | O only %}
+        {% include 'sidebar' | O with {
+            'class': 'js-base-template__sidebar'
+        } only %}
+
+        <main class="g-grid g-grid--container"}>
+            {% block content %}
+                {% include 'content' | O only %}
+            {% endblock %}
+        </main>
 
         {% include 'footer' | O with {
             'data': {
                 'copyright': '(c) Spryker Frontend Team ;)'
             }
+        } only %}
+
+        {% include 'overlay' | A with {
+            'class': 'js-base-template__overlay js-base-template__toggler'
         } only %}
 
         {% block javascript %}

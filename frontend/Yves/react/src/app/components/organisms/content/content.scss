@@ -1,0 +1,10 @@
+
+@import '~shared';
+
+.o-content {
+    z-index: $zi-content;
+
+    &__html {
+        padding: 16px 0;
+    }
+}

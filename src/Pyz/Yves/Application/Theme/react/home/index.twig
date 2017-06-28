@@ -1,2 +1,6 @@
-{% extends 'home' | T %}
+{% extends 'home' | T with {
+    'data': {
+        'products': products
+    }
+} only %}
 

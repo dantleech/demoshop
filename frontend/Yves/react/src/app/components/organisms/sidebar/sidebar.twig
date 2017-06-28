@@ -1,0 +1,9 @@
+{% extends 'base' | C %}
+
+{% set root = 'o-sidebar' %}
+
+{% block body %}
+    <aside class="{{ block('class') }}" {{ block('attr') }}>
+        hello!
+    </aside>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'base' | C %}
+
+{% set root = 'a-overlay' %}
+
+{% block body %}
+    <div class="{{ block('class') }}" {{ block('attr') }}></div>
+{% endblock %}

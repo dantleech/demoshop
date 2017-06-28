@@ -4,8 +4,7 @@
         "sourceMap": true,
         "noImplicitAny": false,
         "module": "commonjs",
-        "target": "es5",
-        "jsx": "react"
+        "target": "es5"
     },
     "include": [
         "./frontend/Yves/react/src/**/*"
