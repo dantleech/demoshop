@@ -2,9 +2,6 @@
 @import '~shared';
 
 .o-content {
+    margin: 16px 0;
     z-index: $zi-content;
-
-    &__html {
-        padding: 16px 0;
-    }
 }

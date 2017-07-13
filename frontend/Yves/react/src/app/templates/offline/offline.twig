@@ -1,0 +1,16 @@
+{% extends (isAjax ? 'base-async' : 'base') | T %}
+
+{% set products = products | default([]) %}
+
+{% block content %}
+    <div class="g-grid g-grid--container g-grid--stretch">
+        <div class="g-col g-col--expand">
+            <h1>Offline</h1>
+            <p>
+                There is no signal here...
+                <br>
+                Take a coffee in the meanwhile <span class="fa fa-coffee"></span>
+            </p>
+        </div>
+    </div>
+{% endblock %}

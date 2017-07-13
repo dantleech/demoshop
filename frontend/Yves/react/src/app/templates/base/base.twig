@@ -1,5 +1,6 @@
 {%- set lang = lang | default('en-US') -%}
-{%- set title = title | default('Kudu') -%}
+{%- set title = title | default('DevTalk') -%}
+{%- set debug = debug | default(false) -%}
 
 <!DOCTYPE html>
 <html class="no-js" lang="{{ lang }}">
@@ -21,11 +22,11 @@
         <title>{{ title }}</title>
     </head>
 
-    <body class="js-base-template">
+    <body class="t-base js-base-template">
         {% include 'header' | O with {
             'data': {
                 'title': title,
-                'description': 'A Spryker-PWA-React shop example',
+                'description': 'A Spryker-PWA shop example',
                 'togglerClass': 'js-base-template__toggler'
             }
         } only %}
@@ -34,15 +35,11 @@
             'class': 'js-base-template__sidebar'
         } only %}
 
-        <main class="g-grid g-grid--container"}>
-            {% block content %}
-                {% include 'content' | O only %}
-            {% endblock %}
-        </main>
+        {% include 'content' | O only %}
 
         {% include 'footer' | O with {
             'data': {
-                'copyright': '(c) Spryker Frontend Team ;)'
+                'copyright': 'Developed with &hearts; by Spryker Frontend Department'
             }
         } only %}
 

@@ -12,8 +12,20 @@ $o-sidebar-width: 250px;
     right: - $o-sidebar-width;
     width: $o-sidebar-width;
     margin: auto;
+    padding-top: 54px;
     background-color: $color-white;
     z-index: $zi-sidebar;
+
+    &__link {
+        display: block;
+        padding: 16px;
+        border-bottom: 1px solid $color-gray;
+
+        &:hover {
+            background-color: $color-bg;
+            text-decoration: none;
+        }
+    }
 
     &.u-is-shown {
         transform: translateX(- $o-sidebar-width);

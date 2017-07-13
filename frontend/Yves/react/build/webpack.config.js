@@ -115,6 +115,9 @@ let config = {
             from: path.join(settings.paths.sourceDir, 'static/images'),
             to: 'images'
         }, {
+            from: path.join(settings.paths.sourceDir, 'src/app/sw'),
+            to: '../../'
+        }, {
             from: path.join(settings.paths.rootDir, 'node_modules/font-awesome/fonts'),
             to: 'fonts'
         }])

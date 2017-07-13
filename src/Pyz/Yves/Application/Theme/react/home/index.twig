@@ -1,6 +1,4 @@
-{% extends 'home' | T with {
-    'data': {
-        'products': products
-    }
+{% include 'home' | T with {
+    'isAjax': isAjax,
+    'products': data.products
 } only %}
-

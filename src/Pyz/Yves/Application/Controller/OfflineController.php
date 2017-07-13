@@ -10,28 +10,18 @@ namespace Pyz\Yves\Application\Controller;
 use Spryker\Yves\Kernel\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 
-/**
- * @method \Pyz\Yves\Application\ApplicationFactory getFactory()
- */
-class HomeController extends AbstractController
+class OfflineController extends AbstractController
 {
 
-    const FEATURED_PRODUCT_LIMIT = 6;
-
     /**
-     * @param Request $request
+     * @param \Symfony\Component\HttpFoundation\Request $request
      *
-     * @return array
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function indexAction(Request $request)
     {
-        $searchResult = $this->getFactory()
-            ->getCatalogClient()
-            ->getFeaturedProducts(self::FEATURED_PRODUCT_LIMIT);
-
         return $this->viewResponse([
             'isAjax' => (bool) $request->get('fetch'),
-            'data' => $searchResult
         ]);
     }
 

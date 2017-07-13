@@ -1,7 +1,12 @@
-{% extends 'base' | T %}
+{% extends 'base-async' | T %}
 
 {% block content %}
-    <div class="g-col g-col--expand">
-        Error 404
+    <div class="g-grid g-grid--container">
+        <div class="g-col">
+            <h1>Error 404</h1>
+            <p>
+                I think you're in the wrong place, buddy... <a href="/#/">Try here!</a>
+            </p>
+        </div>
     </div>
 {% endblock %}

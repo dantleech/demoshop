@@ -1,0 +1,30 @@
+{% extends 'base' | C %}
+
+{% set root = 'm-card' %}
+{% set name = data.name | default('') %}
+{% set description = data.description | default('') %}
+{% set price = data.price | default(0) %}
+{% set imageUrl = data.imageUrl | default('') %}
+{% set url = data.url | default('') %}
+
+{% block body %}
+    <article class="{{ block('class') }}" {{ block('attr') }}>
+        <div class="m-card__container">
+            <div class="m-card__image-wrapper">
+                <img class="m-card__image" src="{{ imageUrl }}" />
+            </div>
+
+            <div class="m-card__content">
+                <h5>{{ name }}</h5>
+                <p>
+                    {{ description }}
+                    <strong>{{ price | money }}</strong>
+                </p>
+            </div>
+
+            <a class="m-card__action" href="/#{{ url }}">
+                <strong>View this masterpiece &raquo;</strong>
+            </a>
+        </div>
+    </article>
+{% endblock %}

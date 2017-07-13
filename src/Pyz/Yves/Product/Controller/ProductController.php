@@ -20,7 +20,7 @@ class ProductController extends AbstractController
     /**
      * @param \Generated\Shared\Transfer\StorageProductTransfer $storageProductTransfer
      *
-     * @return array
+     * @return array | \Symfony\Component\HttpFoundation\JsonResponse
      */
     public function detailAction(StorageProductTransfer $storageProductTransfer)
     {
@@ -32,6 +32,7 @@ class ProductController extends AbstractController
             ->getProductOptions($storageProductTransfer->getIdProductAbstract(), $this->getLocale());
 
         $productData = [
+            'isAjax' => (bool) $this->getRequest()->get('fetch'),
             'product' => $storageProductTransfer,
             'productCategories' => $categories,
             'category' => count($categories) ? end($categories) : null,

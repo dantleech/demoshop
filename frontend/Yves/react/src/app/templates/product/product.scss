@@ -1,0 +1,15 @@
+
+@import '~shared';
+
+.t-product {
+    &__description {
+        max-width: 700px;
+        padding-left: 16px;
+        border-left: 16px solid $color-main;
+    }
+
+    &__attribute {
+        padding-left: 16px;
+        border-left: 16px solid $color-alt;
+    }
+}

@@ -1,0 +1,37 @@
+
+@import '~shared';
+
+.m-card {
+    padding: 8px;
+    display: flex;
+    align-items: stretch;
+
+    &__container {
+        @include shadow;
+        width: 100%;
+        padding: 16px;
+        background-color: $color-white;
+    }
+
+    &__image-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 200px;
+    }
+
+    &__image {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    &__content {
+        padding-bottom: 40px;
+    }
+
+    &__action {
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+    }
+}

@@ -3,7 +3,7 @@
 {% set root = 'o-content' %}
 
 {% block body %}
-    <div class="{{ block('class') }} g-col g-col--expand js-content" {{ block('attr') }}>
-        <div class="o-content__html js-content__html"></div>
-    </div>
+    <main class="{{ block('class') }} js-content" {{ block('attr') }}>
+        <div class="js-content__html"></div>
+    </main>
 {% endblock %}

@@ -4,6 +4,9 @@
 
 {% block body %}
     <aside class="{{ block('class') }}" {{ block('attr') }}>
-        hello!
+        <nav>
+            <a class="o-sidebar__link" href="/#/">Home page</a>
+            <a class="o-sidebar__link" href="/#/why-php-is-good">Some page that does not exist</a>
+        </nav>
     </aside>
 {% endblock %}

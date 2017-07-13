@@ -25,6 +25,7 @@ class E404Controller extends AbstractController
         return $this->viewResponse([
             'error' => $this->getErrorMessage($request),
             'hideUserMenu' => true,
+            'isAjax' => (bool) $request->get('fetch'),
         ]);
     }
 

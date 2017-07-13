@@ -1,4 +1,5 @@
 
+import './base.scss';
 import * as $ from 'jquery';
 import { register } from '../../libs/core';
 import Component from '../../components/base/base';
@@ -26,6 +27,7 @@ class BaseTemplate extends Component {
     }
 
     toggleSide() {
+        this.$el.toggleClass('u-is-shown');
         this.$sidebar.toggleClass('u-is-shown');
         this.$overlay.toggleClass('u-is-shown');
     }

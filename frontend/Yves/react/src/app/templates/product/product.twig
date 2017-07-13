@@ -1,0 +1,27 @@
+{% extends (isAjax ? 'base-async' : 'base') | T %}
+
+{% set product = product | default(null) %}
+
+{% block content %}
+    <section class="t-product g-grid g-grid--container">
+        <div class="g-col g-col--sm-12">
+            <h1>{{ product.name }}</h1>
+            <strong>{{ product.price | money }}</strong>
+        </div>
+        
+        <div class="g-col g-col--sm-12">
+            <p class="t-product__description">{{ product.description }}</p>
+        </div>
+
+        <div class="g-grid g-grid--stretch">
+            {% for attributeName, attributeValue in product.attributes if attributeName  %}
+                <div class="g-col g-col--sm-12 g-col--md-6 g-col--lg-4">
+                    <p class="t-product__attribute">
+                        <strong>{{ ('product.attribute.'~attributeName) | trans }}</strong><br>
+                        {{ attributeValue }}
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

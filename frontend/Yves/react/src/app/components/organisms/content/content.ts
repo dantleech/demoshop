@@ -11,7 +11,7 @@ class Content extends Component {
         this.$html = $('.js-content__html', this.$el);
 
         this.mapEvents();
-        this.load()
+        this.load();
     }
 
     mapEvents() {
@@ -22,31 +22,39 @@ class Content extends Component {
         this.load();
     }
 
-    load() { 
+    load() {
+        const that = this;
         console.log('loading', this.hash);
 
-        // $.ajaxPrefilter(function (options) {
-        //     options.async = true;
-        // });
-                
-        $.ajax({
-            method: 'GET',
-            url: this.hash,
-            success: this.onSuccess.bind(this),
-            error: this.onError.bind(this)
+        fetch(this.hash + '?fetch=1').then(function (response) {
+            return response.text().then(function (data) {
+                that.$html.html(data);
+            });
+        }).catch(function (err) {
+            that.fallback();
         });
     }
 
-    onSuccess(data) { 
-        this.$html.html(data);
+    fallback() {
+        const that = this;
+        console.log('fallback');
+
+        fetch('/offline?fetch=1').then(function (response) {
+            if (response.status !== 200) {
+                console.log('Looks like there was a problem. Status Code: ' + response.status);
+                return;
+            }
+
+            response.text().then(function (data) {
+                that.$html.html(data);
+            });
+        }).catch(function (err) {
+            console.log('Fetch Error :-S', err);
+        });
     }
 
-    onError() { 
-        window.location.href = this.hash;
-    }
-  
     get hash() {
-        return (window.location.hash || '/').replace('#', '');    
+        return (window.location.hash || '/').replace('#', '');
     }
 
 }

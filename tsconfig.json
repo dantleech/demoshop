@@ -4,8 +4,10 @@
         "sourceMap": true,
         "noImplicitAny": false,
         "module": "commonjs",
-        "target": "es5"
+        "target": "es5",
+        "jsx": "react"
     },
+    "baseUrl": ".",
     "include": [
         "./frontend/Yves/react/src/**/*"
     ]

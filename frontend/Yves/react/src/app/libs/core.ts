@@ -1,24 +1,34 @@
 import * as $ from 'jquery';
 
-const registeredComponentsMap = {};
+interface IComponent {
+    init(selector: string, element: any): void
+    onMounted(): void
+    onInitialized(): void
+}
+
+interface IComponentMap {
+    [key: string]: IComponent;
+}
+
+const componentMap: IComponentMap = {};
 
 function mountComponent(Component, selector, el) {
     const $el = $(el);
     const key = $el.data('component-key');
-    const component = new Component(selector, key, $el);
-    component.mounted && component.mounted();
+    const component = new Component(selector, $el);
+    component.onMounted();
 
     return component;
 }
 
-function mountAllRegisteredComponents() {
+function mountComponents() {
     const components = [];
 
-    Object.keys(registeredComponentsMap).forEach((selector) => {
-        const Component = registeredComponentsMap[selector];
-        const $elements = $(selector);
+    Object.keys(componentMap).forEach((selector) => {
+        const Component = componentMap[selector];
+        const elementList = document.querySelectorAll(selector);
 
-        $elements.each((index, el) => {
+        elementList.forEach((value, key) => {
             const component = mountComponent(Component, selector, el);
             components.push(component);
         });
@@ -27,15 +37,26 @@ function mountAllRegisteredComponents() {
     return components;
 }
 
-export function register(selector, Component) {
-    if (!registeredComponentsMap[selector]) {
-        registeredComponentsMap[selector] = Component;
+export function register(selector: string, Component: IComponent) {
+    if (!componentMap[selector]) {
+        componentMap[selector] = Component;
     }
 
     return Component;
 }
 
-export function init() {
-    const components = mountAllRegisteredComponents();
-    components.forEach(component => component.init());
+export function override(selector: string, Component: IComponent) {
+    if (!!componentMap[selector]) {
+        componentMap[selector] = Component;
+    }
+
+    return Component;
 }
+
+export function bootstrap() {
+    const components = mountComponents();
+    components.forEach(component => component.init());
+    components.forEach(component => component.onInitialized());
+}
+
+
