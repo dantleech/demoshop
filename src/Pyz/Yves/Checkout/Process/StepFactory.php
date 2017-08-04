@@ -25,6 +25,7 @@ use Spryker\Yves\StepEngine\Process\StepBreadcrumbGenerator;
 use Spryker\Yves\StepEngine\Process\StepCollection;
 use Spryker\Yves\StepEngine\Process\StepCollectionInterface;
 use Spryker\Yves\StepEngine\Process\StepEngine;
+use Pyz\Yves\Checkout\Process\Steps\VoucherStep;
 
 class StepFactory extends SprykerStepFactory
 {
@@ -52,6 +53,7 @@ class StepFactory extends SprykerStepFactory
         $stepCollection
             ->addStep($this->createEntryStep())
             ->addStep($this->createCustomerStep())
+            ->addStep($this->createVoucherStep())
             ->addStep($this->createAddressStep())
             ->addStep($this->createShipmentStep())
             ->addStep($this->createPaymentStep())
@@ -70,6 +72,18 @@ class StepFactory extends SprykerStepFactory
         return new EntryStep(
             CheckoutControllerProvider::CHECKOUT_INDEX,
             ApplicationControllerProvider::ROUTE_HOME
+        );
+    }
+
+    /**
+     * @return \Spryker\Yves\StepEngine\Process\StepBreadcrumbGeneratorInterface
+     */
+    public function createVoucherStep()
+    {
+        return new VoucherStep(
+            CheckoutControllerProvider::CHECKOUT_VOUCHER,
+            ApplicationControllerProvider::ROUTE_HOME,
+            $this->getCalculationClient()
         );
     }
 

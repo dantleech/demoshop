@@ -22,6 +22,7 @@ class CheckoutControllerProvider extends AbstractYvesControllerProvider
     const CHECKOUT_ERROR = 'checkout-error';
     const CHECKOUT_SUCCESS = 'checkout-success';
     const CHECKOUT_INDEX = 'checkout-index';
+    const CHECKOUT_VOUCHER = 'checkout-voucher';
 
     /**
      * @param \Silex\Application $app
@@ -73,6 +74,11 @@ class CheckoutControllerProvider extends AbstractYvesControllerProvider
             ->method('GET|POST');
 
         $this->createController('/{checkout}/success', self::CHECKOUT_SUCCESS, 'Checkout', 'Checkout', 'success')
+            ->assert('checkout', $allowedLocalesPattern . 'checkout|checkout')
+            ->value('checkout', 'checkout')
+            ->method('GET|POST');
+
+        $this->createController('/{checkout}/voucher', self::CHECKOUT_VOUCHER, 'Checkout', 'Checkout', 'voucher')
             ->assert('checkout', $allowedLocalesPattern . 'checkout|checkout')
             ->value('checkout', 'checkout')
             ->method('GET|POST');

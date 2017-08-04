@@ -24,6 +24,8 @@ use Spryker\Yves\StepEngine\Dependency\Form\StepEngineFormDataProviderInterface;
 use Spryker\Yves\StepEngine\Dependency\Plugin\Form\SubFormPluginCollection;
 use Spryker\Yves\StepEngine\Form\FormCollectionHandler;
 use Symfony\Component\Form\FormTypeInterface;
+use Spryker\Yves\StepEngine\Form\FormCollectionHandlerInterface;
+use Pyz\Yves\Checkout\Form\Steps\VoucherForm;
 
 class FormFactory extends SprykerFormFactory
 {
@@ -42,6 +44,11 @@ class FormFactory extends SprykerFormFactory
     public function createAddressFormCollection()
     {
         return $this->createFormCollection($this->getAddressFormTypes(), $this->createAddressFormDataProvider());
+    }
+
+    public function createVoucherFormCollection(): FormCollectionHandlerInterface
+    {
+        return $this->createFormCollection($this->getVoucherFormTypes());
     }
 
     /**
@@ -274,4 +281,10 @@ class FormFactory extends SprykerFormFactory
         return $this->getProvidedDependency(CheckoutDependencyProvider::CLIENT_CART);
     }
 
+    public function getVoucherFormTypes()
+    {
+        return [
+            new VoucherForm()
+        ];
+    }
 }

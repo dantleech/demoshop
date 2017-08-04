@@ -15,6 +15,17 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class CheckoutController extends AbstractController
 {
+    public function voucherAction(Request $request)
+    {
+        $response = $this->createStepProcess()->process(
+            $request,
+            $this->getFactory()
+                ->createCheckoutFormFactory()
+                ->createVoucherFormCollection()
+        );
+
+        return $response;
+    }
 
     /**
      * @param \Symfony\Component\HttpFoundation\Request $request
