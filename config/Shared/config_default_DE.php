@@ -11,7 +11,7 @@ use Spryker\Shared\Session\SessionConstants;
 use Spryker\Shared\ZedRequest\ZedRequestConstants;
 
 // ---------- Yves host
-$config[ApplicationConstants::HOST_YVES] = 'www.de.demoshop.local';
+$config[ApplicationConstants::HOST_YVES] = 'spryker.yves.local';
 $config[ApplicationConstants::PORT_YVES] = '';
 $config[ApplicationConstants::PORT_SSL_YVES] = '';
 $config[ApplicationConstants::BASE_URL_YVES] = sprintf(
